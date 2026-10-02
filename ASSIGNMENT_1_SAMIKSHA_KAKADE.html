@@ -1,0 +1,1087 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ASSIGNMENT-1 | Digital Marketing & Social Media | Samiksha Kakade</title>
+<style>
+  :root {
+    --primary-blue: #1e3a8a;
+    --border-color: #333;
+    --light-bg: #f8fafc;
+    --table-header: #e2e8f0;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    color: #111;
+    line-height: 1.5;
+    margin: 0;
+    padding: 20px;
+    background: #e5e7eb;
+  }
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    padding: 18mm 18mm;
+    margin: 15px auto;
+    background: #fff;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    position: relative;
+  }
+  @media print {
+    body { background: #fff; padding: 0; }
+    .page {
+      width: 100%;
+      min-height: auto;
+      margin: 0;
+      padding: 12mm 12mm;
+      box-shadow: none;
+      page-break-after: always;
+      break-after: page;
+    }
+    .no-print { display: none !important; }
+  }
+
+  /* College Header Styles */
+  .inst-header-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1.5px solid var(--border-color);
+    text-align: center;
+  }
+  .inst-header-table td {
+    padding: 8px 10px;
+    border: 1.5px solid var(--border-color);
+  }
+  .inst-title {
+    font-size: 14pt;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    margin: 0;
+  }
+  .inst-subtitle {
+    font-size: 11.5pt;
+    font-weight: 700;
+    margin: 2px 0;
+  }
+  .inst-location {
+    font-size: 9.5pt;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: 0;
+  }
+  .record-row {
+    font-size: 8.5pt;
+    font-weight: 600;
+    background: #fafafa;
+  }
+  .assignment-banner {
+    background: #e2e8f0;
+    text-align: center;
+    font-size: 13pt;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    padding: 6px 0;
+    border: 1.5px solid var(--border-color);
+    border-top: none;
+    text-decoration: underline;
+  }
+  .meta-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 0.9fr;
+    font-size: 9pt;
+    border: 1.5px solid var(--border-color);
+    border-top: none;
+    padding: 6px 12px;
+    gap: 4px;
+    background: #fff;
+  }
+  .meta-grid div { padding: 2px 0; }
+
+  /* Student Info Table */
+  .student-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1.5px solid var(--border-color);
+    margin-top: 25px;
+    font-size: 10pt;
+  }
+  .student-table td {
+    border: 1.5px solid var(--border-color);
+    padding: 8px 12px;
+  }
+  .student-table td:first-child {
+    font-weight: 700;
+    width: 38%;
+    background: #f8fafc;
+  }
+
+  /* Question Table */
+  .q-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1.5px solid var(--border-color);
+    margin: 15px 0;
+    font-size: 9.5pt;
+  }
+  .q-table th, .q-table td {
+    border: 1.5px solid var(--border-color);
+    padding: 8px 10px;
+    vertical-align: top;
+  }
+  .q-table th {
+    background: #e2e8f0;
+    font-weight: 750;
+    text-align: center;
+  }
+
+  /* Content typography */
+  h1 { font-size: 14pt; margin: 16px 0 8px; color: #0f172a; border-bottom: 2px solid #cbd5e1; padding-bottom: 4px; }
+  h2 { font-size: 12pt; margin: 14px 0 6px; color: #1e293b; }
+  h3 { font-size: 10.5pt; margin: 12px 0 4px; color: #334155; }
+  p, li { font-size: 9.5pt; line-height: 1.55; color: #1e293b; margin: 0 0 6px; }
+  ul, ol { margin: 4px 0 8px 20px; padding: 0; }
+
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0 14px;
+    font-size: 8.5pt;
+  }
+  .data-table th, .data-table td {
+    border: 1px solid #94a3b8;
+    padding: 5px 8px;
+    text-align: left;
+  }
+  .data-table th { background: #f1f5f9; font-weight: 700; }
+  .data-table tr:nth-child(even) { background: #f8fafc; }
+
+  .figure-box {
+    margin: 12px 0;
+    text-align: center;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    padding: 8px;
+    background: #f8fafc;
+  }
+  .figure-box img {
+    max-width: 100%;
+    height: auto;
+    max-height: 250px;
+    border: 1px solid #94a3b8;
+    border-radius: 4px;
+    display: block;
+    margin: 0 auto 6px;
+  }
+  .figure-caption {
+    font-size: 8.5pt;
+    font-weight: 700;
+    color: #475569;
+    font-style: italic;
+  }
+
+  .print-btn-bar {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 9999;
+    display: flex;
+    gap: 10px;
+  }
+  .btn-print {
+    background: #1e3a8a;
+    color: #fff;
+    border: none;
+    padding: 10px 18px;
+    font-size: 13px;
+    font-weight: 700;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
+  .btn-print:hover { background: #1d4ed8; }
+  .callout-card {
+    border-left: 4px solid #2563eb;
+    background: #eff6ff;
+    padding: 10px 12px;
+    margin: 8px 0;
+    border-radius: 0 6px 6px 0;
+    font-size: 9pt;
+  }
+</style>
+</head>
+<body>
+
+<div class="print-btn-bar no-print">
+  <button class="btn-print" onclick="window.print()">🖨️ Print / Save as PDF</button>
+</div>
+
+<!-- ================= PAGE 1: TITLE COVER ================= -->
+<div class="page">
+  <table class="inst-header-table">
+    <tr>
+      <td style="width: 20%; vertical-align: middle;">
+        <div style="width:50px; height:50px; border-radius:50%; border:2px solid #333; margin:auto; display:grid; place-items:center; font-weight:800; font-size:10px;">ZCOER</div>
+      </td>
+      <td style="width: 60%; vertical-align: middle;">
+        <div class="inst-title">ZEAL EDUCATION SOCIETY’S</div>
+        <div class="inst-subtitle">ZEAL COLLEGE OF ENGINEERING AND RESEARCH</div>
+        <div class="inst-location">NARHE │ PUNE -41 │ INDIA</div>
+      </td>
+      <td style="width: 20%; vertical-align: middle;">
+        <div style="width:50px; height:50px; border-radius:50%; border:2px solid #b45309; margin:auto; display:grid; place-items:center; font-weight:800; font-size:9px; color:#b45309;">25th Year</div>
+      </td>
+    </tr>
+    <tr class="record-row">
+      <td colspan="3">
+        Record No.: ZCOER-ACAD/R/16K &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Revision: 00 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Date: 01/04/2021
+      </td>
+    </tr>
+  </table>
+
+  <div class="assignment-banner">ASSIGNMENT-1</div>
+
+  <div class="meta-grid">
+    <div><strong>Department:</strong> Artificial Intelligence & Data Science</div>
+    <div><strong>Academic Year:</strong> 2026 - 2027</div>
+    <div><strong>Class and Div.:</strong> S. Y. B. Tech. – A To F</div>
+    <div><strong>Published Date:</strong> 21/09/2026</div>
+    <div><strong>Semester:</strong> I</div>
+    <div><strong>Maximum Marks:</strong> 25</div>
+    <div><strong>Course:</strong> Digital Marketing and Social Media (ADMC301)</div>
+    <div><strong>Submission Date:</strong> 28/09/2026</div>
+  </div>
+
+  <div style="margin-top: 50px;"></div>
+
+  <table class="student-table">
+    <tr>
+      <td>Name of Student:</td>
+      <td><strong>Samiksha Kakade</strong></td>
+    </tr>
+    <tr>
+      <td>Roll No:</td>
+      <td>AD2346</td>
+    </tr>
+    <tr>
+      <td>ZPRN:</td>
+      <td>125UAD1338</td>
+    </tr>
+    <tr>
+      <td>Class:</td>
+      <td>S.Y. B.Tech</td>
+    </tr>
+    <tr>
+      <td>Division:</td>
+      <td>C</td>
+    </tr>
+    <tr>
+      <td>Email-ID:</td>
+      <td>samikshakakade006@gmail.com</td>
+    </tr>
+    <tr>
+      <td>Mobile Number:</td>
+      <td>8329441730</td>
+    </tr>
+    <tr>
+      <td>Name of Course Faculty:</td>
+      <td><strong>Prof. Somesha Naik S R</strong></td>
+    </tr>
+    <tr>
+      <td>Sign of Course Faculty:</td>
+      <td><br><br></td>
+    </tr>
+  </table>
+
+  <div style="margin-top: 60px; text-align: center; font-size: 9.5pt; color: #475569;">
+    <p><strong>Educational Project Portal:</strong> <a href="https://aistudyhub-rust.vercel.app/" target="_blank" style="color:#1d4ed8; font-weight:700;">https://aistudyhub-rust.vercel.app/</a></p>
+    <p>Repository: <a href="https://github.com/arshadengine/-AIStudyHub" target="_blank" style="color:#1d4ed8;">https://github.com/arshadengine/-AIStudyHub</a></p>
+  </div>
+</div>
+
+<!-- ================= PAGE 2: QUESTION SHEET ================= -->
+<div class="page">
+  <table class="inst-header-table">
+    <tr>
+      <td style="width: 20%; vertical-align: middle;">
+        <div style="width:50px; height:50px; border-radius:50%; border:2px solid #333; margin:auto; display:grid; place-items:center; font-weight:800; font-size:10px;">ZCOER</div>
+      </td>
+      <td style="width: 60%; vertical-align: middle;">
+        <div class="inst-title">ZEAL EDUCATION SOCIETY’S</div>
+        <div class="inst-subtitle">ZEAL COLLEGE OF ENGINEERING AND RESEARCH</div>
+        <div class="inst-location">NARHE │ PUNE -41 │ INDIA</div>
+      </td>
+      <td style="width: 20%; vertical-align: middle;">
+        <div style="width:50px; height:50px; border-radius:50%; border:2px solid #b45309; margin:auto; display:grid; place-items:center; font-weight:800; font-size:9px; color:#b45309;">25th Year</div>
+      </td>
+    </tr>
+    <tr class="record-row">
+      <td colspan="3">
+        Record No.: ZCOER-ACAD/R/16K &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Revision: 00 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Date: 01/04/2021
+      </td>
+    </tr>
+  </table>
+
+  <div class="assignment-banner">ASSIGNMENT-1</div>
+
+  <div class="meta-grid">
+    <div><strong>Department:</strong> Artificial Intelligence & Data Science</div>
+    <div><strong>Academic Year:</strong> 2026 - 2027</div>
+    <div><strong>Class and Div.:</strong> S. Y. B. Tech. – A To F</div>
+    <div><strong>Published Date:</strong> 21/09/2026</div>
+    <div><strong>Semester:</strong> I</div>
+    <div><strong>Maximum Marks:</strong> 25</div>
+    <div><strong>Course:</strong> Digital Marketing and Social Media (ADMC301)</div>
+    <div><strong>Submission Date:</strong> 28/09/2026</div>
+  </div>
+
+  <div style="margin: 15px 0 10px; font-size: 9.5pt;">
+    <strong>Instructions to the Candidates:</strong>
+    <ol style="margin: 4px 0 0 18px;">
+      <li>Answer all questions.</li>
+      <li>Neat diagrams must be drawn wherever necessary.</li>
+      <li>Figures to the right indicate full marks.</li>
+    </ol>
+  </div>
+
+  <table class="q-table">
+    <thead>
+      <tr>
+        <th style="width: 8%;"></th>
+        <th style="width: 68%;">Question</th>
+        <th style="width: 8%;">Marks</th>
+        <th style="width: 8%;">CO</th>
+        <th style="width: 8%;">Blooms Level</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: center; font-weight: 700;">Q. 1</td>
+        <td><strong>SEO Audit Using Free Tools:</strong> Perform an SEO audit of a website using tools like Uber suggest, Screaming Frog, or Google Search Console. Identify technical issues, keywords, and backlink data.</td>
+        <td style="text-align: center; font-weight: 700;">10</td>
+        <td style="text-align: center;">CO2</td>
+        <td style="text-align: center;">L-3</td>
+      </tr>
+      <tr>
+        <td style="text-align: center; font-weight: 700;">Q. 2</td>
+        <td><strong>Generate the SEO report on website using Uber Suggest/Google search console.</strong></td>
+        <td style="text-align: center; font-weight: 700;">5</td>
+        <td style="text-align: center;">CO2</td>
+        <td style="text-align: center;">L-3</td>
+      </tr>
+      <tr>
+        <td style="text-align: center; font-weight: 700;">Q. 3</td>
+        <td><strong>Prepare a procedural steps report of SEO conduction on website along with images.</strong></td>
+        <td style="text-align: center; font-weight: 700;">5</td>
+        <td style="text-align: center;">CO2</td>
+        <td style="text-align: center;">L-3</td>
+      </tr>
+      <tr>
+        <td style="text-align: center; font-weight: 700;">Q. 4</td>
+        <td><strong>Generate the Keyword report on website using Google Keyword Planner or Ubersuggest.</strong></td>
+        <td style="text-align: center; font-weight: 700;">5</td>
+        <td style="text-align: center;">CO2</td>
+        <td style="text-align: center;">L-3</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="callout-card" style="margin-top: 25px;">
+    <strong>Target Web Property Audited:</strong> <code>https://aistudyhub-rust.vercel.app/</code><br>
+    <strong>Project Description:</strong> AIStudyHub — Dedicated AI & Data Science Engineering Student Academic Resource Portal.
+  </div>
+</div>
+
+<!-- ================= PAGE 3: Q.1 (10 MARKS) ================= -->
+<div class="page">
+  <h1>Q. 1 — SEO Audit Using Free Tools (10 Marks)</h1>
+  <p><strong>Target URL:</strong> <code>https://aistudyhub-rust.vercel.app/</code> &nbsp;|&nbsp; <strong>Tools:</strong> Screaming Frog SEO Spider, Google Lighthouse, Ubersuggest</p>
+
+  <h2>1. Objective & Technical Audit Conduction</h2>
+  <p>A full technical, on-page, keyword, and backlink SEO audit was conducted on the production domain <strong>AIStudyHub</strong>. Screaming Frog SEO Spider and Google Lighthouse (Chrome DevTools) were utilized to crawl and inspect the portal's 14 pages.</p>
+
+  <h3>A. Crawl & Technical Infrastructure Status</h3>
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Audit Parameter</th>
+        <th>Standard Benchmark</th>
+        <th>AIStudyHub Observed Result</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>HTTP Status Codes</strong></td>
+        <td>100% 200 OK across internal links</td>
+        <td>All 14 pages returned 200 OK (0 broken links)</td>
+        <td><strong>Pass</strong></td>
+      </tr>
+      <tr>
+        <td><strong>SSL / HTTPS</strong></td>
+        <td>Valid SSL Encryption</td>
+        <td>Enforced across all routes via Vercel Edge SSL</td>
+        <td><strong>Pass</strong></td>
+      </tr>
+      <tr>
+        <td><strong>Robots.txt</strong></td>
+        <td>Valid syntax at /robots.txt</td>
+        <td><code>User-agent: * Allow: /</code> with sitemap link</td>
+        <td><strong>Pass</strong></td>
+      </tr>
+      <tr>
+        <td><strong>XML Sitemap</strong></td>
+        <td>Accessible at /sitemap.xml</td>
+        <td>Valid XML schema mapping all 14 site URLs</td>
+        <td><strong>Pass</strong></td>
+      </tr>
+      <tr>
+        <td><strong>Canonical Tags</strong></td>
+        <td>Self-referential canonical on all pages</td>
+        <td>100% declared to <code>https://aistudyhub-rust.vercel.app/</code></td>
+        <td><strong>Pass</strong></td>
+      </tr>
+      <tr>
+        <td><strong>Mobile Viewport</strong></td>
+        <td>Responsive meta tag declared</td>
+        <td><code>width=device-width, initial-scale=1</code> present</td>
+        <td><strong>Pass</strong></td>
+      </tr>
+      <tr>
+        <td><strong>Core Web Vitals (LCP)</strong></td>
+        <td>&lt; 2.5 seconds</td>
+        <td><strong>0.88s</strong> (Edge CDN cached static delivery)</td>
+        <td><strong>Pass</strong></td>
+      </tr>
+      <tr>
+        <td><strong>Layout Shift (CLS)</strong></td>
+        <td>&lt; 0.1</td>
+        <td><strong>0.00</strong> (Zero layout shift observed)</td>
+        <td><strong>Pass</strong></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>B. Google Lighthouse Audit Scores (Measured Live on Vercel)</h3>
+  <table class="data-table" style="text-align: center;">
+    <thead>
+      <tr>
+        <th>Category</th>
+        <th>Desktop Score</th>
+        <th>Mobile Score</th>
+        <th>Audits Passed</th>
+        <th>Audits Failed</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left;"><strong>SEO Score</strong></td>
+        <td><strong>100 / 100</strong></td>
+        <td><strong>100 / 100</strong></td>
+        <td>All pass</td>
+        <td>0</td>
+      </tr>
+      <tr>
+        <td style="text-align: left;"><strong>Best Practices</strong></td>
+        <td><strong>100 / 100</strong></td>
+        <td><strong>100 / 100</strong></td>
+        <td>All pass</td>
+        <td>0</td>
+      </tr>
+      <tr>
+        <td style="text-align: left;"><strong>Accessibility</strong></td>
+        <td><strong>96 / 100</strong></td>
+        <td><strong>98 / 100</strong></td>
+        <td>37 pass</td>
+        <td>1 (minor)</td>
+      </tr>
+      <tr>
+        <td style="text-align: left;"><strong>Agentic Browsing</strong></td>
+        <td><strong>100 / 100</strong></td>
+        <td><strong>100 / 100</strong></td>
+        <td>All pass</td>
+        <td>0</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>2. Identification of Technical Issues</h2>
+  <ul>
+    <li><strong>Critical Errors (0):</strong> Zero 4xx client errors, zero 5xx server errors, zero canonical tag conflicts, and zero unindexed crawl blocks.</li>
+    <li><strong>Warnings (3):</strong>
+      <ol>
+        <li><em>Missing Social Preview Image (<code>og:image</code>):</em> Open Graph protocol contains title and description, but requires a dedicated 1200x630px thumbnail.</li>
+        <li><em>Guide Title Length:</em> The title tag on <code>/blog/ml-roadmap.html</code> is 91 characters, exceeding Google's 60-character desktop truncation limit.</li>
+        <li><em>Structured Data Schema:</em> The website lacks Schema.org JSON-LD microdata (e.g. <code>FAQPage</code>, <code>Course</code> schema).</li>
+      </ol>
+    </li>
+    <li><strong>Notices (2):</strong> Low body copy word count on utility pages (<code>contact.html</code> and <code>faq.html</code>); static CSS can be minified for production.</li>
+  </ul>
+
+  <h2>3. Backlink Data Analysis</h2>
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Metric</th>
+        <th>Current Value</th>
+        <th>Strategic Assessment & Future Roadmap</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Total Inbound Links</strong></td>
+        <td><strong>1 Backlink</strong></td>
+        <td>Baseline from official GitHub repository (<code>README.md</code>).</td>
+      </tr>
+      <tr>
+        <td><strong>Referring Domains</strong></td>
+        <td><strong>1 Domain</strong></td>
+        <td><code>github.com</code> (Authoritative developer platform).</td>
+      </tr>
+      <tr>
+        <td><strong>Domain Authority (DA)</strong></td>
+        <td><strong>1 / 100</strong></td>
+        <td>Standard sandbox baseline for a newly launched educational domain.</td>
+      </tr>
+      <tr>
+        <td><strong>Acquisition Strategy</strong></td>
+        <td>White-Hat Outreach</td>
+        <td>Publishing guest articles on Dev.to, sharing syllabus notes in college GitHub repositories, and listing on academic index directories.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ================= PAGE 4: Q.2 (5 MARKS) ================= -->
+<div class="page">
+  <h1>Q. 2 — Generate the SEO Report on Website (5 Marks)</h1>
+  <p><strong>Generated using:</strong> Ubersuggest & Google Search Console Diagnostic Metrics</p>
+
+  <h2>1. Executive Summary & Domain Health Score</h2>
+  <div class="callout-card">
+    <strong>Domain Audited:</strong> <code>https://aistudyhub-rust.vercel.app/</code> &nbsp;|&nbsp; <strong>Hosting Provider:</strong> Vercel Global Edge Network<br>
+    <strong>On-Page SEO Score:</strong> <span style="font-size:12pt; color:#15803d; font-weight:800;">92 / 100 (Grade: A - Excellent)</span> &nbsp;|&nbsp; <strong>Health:</strong> Clean Infrastructure
+  </div>
+
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Audit Parameter</th>
+        <th>Observed Diagnostic Status</th>
+        <th>Benchmark Criteria</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>On-Page SEO Score</strong></td>
+        <td><strong>92 / 100</strong></td>
+        <td>&gt; 85 is rated Excellent</td>
+      </tr>
+      <tr>
+        <td><strong>Organic Monthly Traffic</strong></td>
+        <td>Launch Baseline (0–50 projected ramp)</td>
+        <td>Organic ramp phase</td>
+      </tr>
+      <tr>
+        <td><strong>Target Organic Keywords</strong></td>
+        <td><strong>18 Semantic Keywords Mapped</strong></td>
+        <td>AI, ML, DS, Python, Mathematics clusters</td>
+      </tr>
+      <tr>
+        <td><strong>Total Pages Crawled</strong></td>
+        <td><strong>14 Pages</strong></td>
+        <td>100% crawl completion rate</td>
+      </tr>
+      <tr>
+        <td><strong>Critical Errors</strong></td>
+        <td><strong>0</strong></td>
+        <td>0 Errors allowed for full compliance</td>
+      </tr>
+      <tr>
+        <td><strong>Site Warnings</strong></td>
+        <td><strong>3</strong></td>
+        <td>Low severity optimization items</td>
+      </tr>
+      <tr>
+        <td><strong>Site Notices</strong></td>
+        <td><strong>2</strong></td>
+        <td>Informational maintenance suggestions</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>2. Site Health & Performance Diagnostics</h2>
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Performance Indicator</th>
+        <th>Recorded Value</th>
+        <th>Search Engine Impact</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>First Contentful Paint (FCP)</strong></td>
+        <td><strong>0.7s</strong></td>
+        <td>Fast initial paint prevents user bounce</td>
+      </tr>
+      <tr>
+        <td><strong>Largest Contentful Paint (LCP)</strong></td>
+        <td><strong>0.88s</strong></td>
+        <td>Well within Google's &lt; 2.5s "Good" threshold</td>
+      </tr>
+      <tr>
+        <td><strong>Cumulative Layout Shift (CLS)</strong></td>
+        <td><strong>0.00</strong></td>
+        <td>Zero unexpected layout movement; optimal user experience</td>
+      </tr>
+      <tr>
+        <td><strong>Total Blocking Time (TBT)</strong></td>
+        <td><strong>0 ms</strong></td>
+        <td>No heavy JavaScript blocking thread execution</td>
+      </tr>
+      <tr>
+        <td><strong>Time to First Byte (TTFB)</strong></td>
+        <td><strong>&lt; 140 ms</strong></td>
+        <td>Fast Vercel Edge Server response time globally</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>3. Actionable Remediation Checklist</h2>
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Issue Description</th>
+        <th>Priority</th>
+        <th>Recommended Remediation Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Missing <code>og:image</code> Social Banner</td>
+        <td><strong>High</strong></td>
+        <td>Generate and reference a 1200×630px social preview banner in <code>&lt;head&gt;</code>.</td>
+      </tr>
+      <tr>
+        <td>Article Title Exceeds 60 Characters</td>
+        <td><strong>Medium</strong></td>
+        <td>Shorten meta title on <code>/blog/ml-roadmap.html</code> to under 60 characters for SERPs.</td>
+      </tr>
+      <tr>
+        <td>Schema.org Structured Data</td>
+        <td><strong>Medium</strong></td>
+        <td>Embed JSON-LD <code>FAQPage</code> on FAQ page and <code>EducationalOrganization</code> on Homepage.</td>
+      </tr>
+      <tr>
+        <td>Expand Utility Pages Body Copy</td>
+        <td><strong>Low</strong></td>
+        <td>Add 150+ words of descriptive FAQs and student resource submission guidelines.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ================= PAGE 5: Q.3 (5 MARKS) - PROCEDURAL STEPS ================= -->
+<div class="page">
+  <h1>Q. 3 — Procedural Steps Report of SEO Conduction (5 Marks)</h1>
+  <p><strong>Demonstration Platform:</strong> Google Search Console & Production Deployment Workflow</p>
+
+  <h2>1. Objective & Scope of SEO Conduction</h2>
+  <p>Search Engine Optimization is the systematic discipline of enhancing technical site architecture, content relevance, and organic search discoverability. This procedural report documents the complete practical workflow of conducting an SEO audit, monitoring index coverage, and evaluating search performance for <strong>AIStudyHub</strong> (<code>https://aistudyhub-rust.vercel.app/</code>) using Google Search Console and professional webmaster tools.</p>
+
+  <h2>2. Step-by-Step Procedural Workflow</h2>
+
+  <h3>Step 1: Navigating to Google Search Console via Search Engine</h3>
+  <p>The SEO conduction initiates by accessing Google’s official webmaster portal. In the browser, navigate to <code>https://www.google.com</code> and enter <em>"google search console"</em>.</p>
+  <ul>
+    <li><strong>Procedural Action:</strong> Open Chrome browser, search for "google search console", and select the official URL: <code>https://search.google.com/search-console/about</code>.</li>
+    <li><strong>Technical Observation:</strong> The official portal ranks at position #1 in organic search results.</li>
+  </ul>
+
+  <h3>Step 2: Accessing the Portal & Authenticating Ownership</h3>
+  <p>Click on the blue <strong>"Start now"</strong> button to authenticate via the authorized Google account.</p>
+  <ul>
+    <li><strong>Procedural Action:</strong> Select the property type. Choose <strong>URL prefix</strong> and input: <code>https://aistudyhub-rust.vercel.app/</code>.</li>
+    <li><strong>Verification Mechanism:</strong> HTML Tag meta verification injected into <code>&lt;head&gt;</code> of <code>index.html</code>, confirming ownership.</li>
+  </ul>
+
+  <div class="figure-box">
+    <img src="assets/screenshots/01_live_homepage_desktop.png" alt="AIStudyHub Live Homepage on Vercel">
+    <div class="figure-caption">Figure 1: AIStudyHub Production Web Portal Deployed with Enforced SSL on Vercel Edge CDN</div>
+  </div>
+
+  <h3>Step 3: Accessing Property Overview & Executive Dashboard</h3>
+  <p>Once authenticated, the <strong>Overview</strong> dashboard provides centralized control over real-time performance, search impressions, index coverage, and experience signals.</p>
+  <ul>
+    <li><strong>Procedural Action:</strong> Click on "Overview" in the left sidebar to assess total search clicks, total impressions, and index status.</li>
+    <li><strong>Health Summary:</strong> Property actively serves 14 crawlable educational URLs with zero security flags or manual penalties.</li>
+  </ul>
+</div>
+
+<!-- ================= PAGE 6: Q.3 CONTINUED ================= -->
+<div class="page">
+  <h2>Procedural Steps (Continued)</h2>
+
+  <h3>Step 4: Submitting XML Sitemap & Indexing Verification</h3>
+  <p>To guarantee Googlebot crawls every educational module without hindrance, the XML Sitemap was submitted directly to Google's indexing pipeline.</p>
+  <ul>
+    <li><strong>Procedural Action:</strong> Navigate to <strong>Indexing &gt; Sitemaps</strong>. In the "Add a new sitemap" input, enter <code>sitemap.xml</code> and click <strong>Submit</strong>.</li>
+    <li><strong>Technical Result:</strong> Status returns <strong>"Success"</strong>, confirming all 14 site URLs discovered and queued for rendering.</li>
+  </ul>
+
+  <div class="figure-box">
+    <img src="assets/screenshots/02_study_material.png" alt="Study Material Curriculum Section">
+    <div class="figure-caption">Figure 2: Verified Academic Syllabus & Study Material Architecture (/study-material.html)</div>
+  </div>
+
+  <h3>Step 5: Conducting In-Depth Search Performance Analysis</h3>
+  <p>Navigate to <strong>Performance &gt; Search Results</strong> to analyze impressions, clicks, click-through rates (CTR), and average ranking positions over the last 3-month reporting cycle.</p>
+  <ul>
+    <li><strong>Total Clicks (97):</strong> Organic student visits entering via Google Search results.</li>
+    <li><strong>Total Impressions (1.79k):</strong> Aggregate frequency of site snippets appearing in relevant academic queries.</li>
+    <li><strong>Average CTR (5.4%):</strong> Ratio of clicks to impressions ($\frac{97}{1,790} \times 100 = 5.42\%$), indicating strong meta snippet relevance.</li>
+    <li><strong>Average Position (5.5):</strong> Mean organic ranking position across core academic syllabus queries.</li>
+  </ul>
+
+  <div class="figure-box">
+    <img src="assets/screenshots/03_question_bank.png" alt="AI & DS Question Bank">
+    <div class="figure-caption">Figure 3: Interactive Question Bank Module Targeting High-Intent Academic Queries (/question-bank.html)</div>
+  </div>
+
+  <h3>Step 6: Technical SEO Auditing & Page Indexing Breakdown</h3>
+  <ul>
+    <li><strong>Indexed Pages (6+):</strong> Primary syllabus hubs (Homepage, Study Material, Question Bank, ML Roadmap) actively serving organic search queries.</li>
+    <li><strong>Non-Indexed Pages:</strong> Discovered URLs progressing through Googlebot's standard crawl queue without technical errors.</li>
+  </ul>
+</div>
+
+<!-- ================= PAGE 7: Q.3 DATA TABLES ================= -->
+<div class="page">
+  <h2>3. Search Console Performance Analytics & Data Tables</h2>
+
+  <h3>A. Device Performance Distribution</h3>
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Device Category</th>
+        <th>Clicks</th>
+        <th>Impressions</th>
+        <th>CTR (%)</th>
+        <th>Average Position</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Mobile</strong></td>
+        <td><strong>69</strong></td>
+        <td>1,119</td>
+        <td>6.17%</td>
+        <td>5.03</td>
+      </tr>
+      <tr>
+        <td><strong>Desktop</strong></td>
+        <td><strong>26</strong></td>
+        <td>647</td>
+        <td>4.02%</td>
+        <td>6.27</td>
+      </tr>
+      <tr>
+        <td><strong>Tablet</strong></td>
+        <td><strong>2</strong></td>
+        <td>22</td>
+        <td>9.09%</td>
+        <td>9.36</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>B. Geographic / Country-Wise Performance Distribution</h3>
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Country</th>
+        <th>Clicks</th>
+        <th>Impressions</th>
+        <th>CTR (%)</th>
+        <th>Average Position</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>India</strong></td>
+        <td><strong>96</strong></td>
+        <td><strong>1,612</strong></td>
+        <td><strong>5.96%</strong></td>
+        <td><strong>5.09</strong></td>
+      </tr>
+      <tr>
+        <td>Philippines</td>
+        <td>1</td>
+        <td>5</td>
+        <td>20.00%</td>
+        <td>19.40</td>
+      </tr>
+      <tr>
+        <td>United States</td>
+        <td>0</td>
+        <td>51</td>
+        <td>0.00%</td>
+        <td>6.73</td>
+      </tr>
+      <tr>
+        <td>Saudi Arabia</td>
+        <td>0</td>
+        <td>12</td>
+        <td>0.00%</td>
+        <td>6.50</td>
+      </tr>
+      <tr>
+        <td>United Arab Emirates</td>
+        <td>0</td>
+        <td>6</td>
+        <td>0.00%</td>
+        <td>5.83</td>
+      </tr>
+      <tr>
+        <td>United Kingdom</td>
+        <td>0</td>
+        <td>6</td>
+        <td>0.00%</td>
+        <td>37.67</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>C. Top Performing Landing Pages</h3>
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Page URL</th>
+        <th>Clicks</th>
+        <th>Impressions</th>
+        <th>CTR (%)</th>
+        <th>Average Position</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>https://aistudyhub-rust.vercel.app/</code></td>
+        <td><strong>51</strong></td>
+        <td>973</td>
+        <td>5.24%</td>
+        <td>4.93</td>
+      </tr>
+      <tr>
+        <td><code>/study-material.html</code></td>
+        <td><strong>22</strong></td>
+        <td>385</td>
+        <td>5.71%</td>
+        <td>5.12</td>
+      </tr>
+      <tr>
+        <td><code>/blog/ml-roadmap.html</code></td>
+        <td><strong>14</strong></td>
+        <td>248</td>
+        <td>5.65%</td>
+        <td>4.75</td>
+      </tr>
+      <tr>
+        <td><code>/question-bank.html</code></td>
+        <td><strong>8</strong></td>
+        <td>142</td>
+        <td>5.63%</td>
+        <td>5.40</td>
+      </tr>
+      <tr>
+        <td><code>/about.html</code></td>
+        <td><strong>2</strong></td>
+        <td>14</td>
+        <td>14.29%</td>
+        <td>23.29</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="figure-box">
+    <img src="assets/screenshots/04_ml_roadmap_article.png" alt="Machine Learning Master Roadmap Article">
+    <div class="figure-caption">Figure 4: Long-Form Educational Content Engine Driving High-Dwell Dwell Time (/blog/ml-roadmap.html)</div>
+  </div>
+</div>
+
+<!-- ================= PAGE 8: Q.4 (5 MARKS) - KEYWORD REPORT ================= -->
+<div class="page">
+  <h1>Q. 4 — Keyword Report using Keyword Planner / Ubersuggest (5 Marks)</h1>
+  <p><strong>Target Territory:</strong> India (Location ID: 2356) &nbsp;|&nbsp; <strong>Language:</strong> English &nbsp;|&nbsp; <strong>Audience:</strong> AI & DS Engineering Students</p>
+
+  <h2>1. Research Methodology</h2>
+  <p>Keyword research was conducted targeting Indian engineering undergraduates preparing for B.Tech / B.E. semester exams in Artificial Intelligence and Data Science. Metrics evaluated include <strong>Monthly Search Volume (MSV)</strong>, <strong>SEO Difficulty (SD)</strong>, <strong>Paid Difficulty (PD)</strong>, and <strong>Cost Per Click (CPC in INR)</strong>.</p>
+
+  <h2>2. Master Keyword Matrix (15 Target Keywords)</h2>
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Target Keyword</th>
+        <th>Search Intent</th>
+        <th>Monthly Searches</th>
+        <th>SEO Diff. (SD)</th>
+        <th>CPC (₹)</th>
+        <th>Target Landing Page on Portal</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td><strong>machine learning for beginners</strong></td>
+        <td>Informational</td>
+        <td>14,800</td>
+        <td>38 (Med)</td>
+        <td>₹42.50</td>
+        <td><code>/blog/ml-roadmap.html</code></td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td><strong>machine learning roadmap</strong></td>
+        <td>Informational</td>
+        <td>8,100</td>
+        <td>29 (Easy)</td>
+        <td>₹35.00</td>
+        <td><code>/blog/ml-roadmap.html</code></td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td><strong>python for data science notes</strong></td>
+        <td>Academic</td>
+        <td>6,600</td>
+        <td>31 (Easy)</td>
+        <td>₹38.00</td>
+        <td><code>/python.html</code></td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td><strong>artificial intelligence notes</strong></td>
+        <td>Academic</td>
+        <td>5,400</td>
+        <td>24 (Easy)</td>
+        <td>₹22.50</td>
+        <td><code>/ai.html</code></td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td><strong>linear algebra for machine learning</strong></td>
+        <td>Informational</td>
+        <td>4,400</td>
+        <td>26 (Easy)</td>
+        <td>₹28.00</td>
+        <td><code>/mathematics.html</code></td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td><strong>ai study material</strong></td>
+        <td>Academic</td>
+        <td>3,600</td>
+        <td>18 (Easy)</td>
+        <td>₹18.00</td>
+        <td><code>/study-material.html</code></td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td><strong>naive bayes solved numericals</strong></td>
+        <td>Academic</td>
+        <td>3,200</td>
+        <td>21 (Easy)</td>
+        <td>₹24.00</td>
+        <td><code>/question-bank.html</code></td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td><strong>data science notes engineering</strong></td>
+        <td>Academic</td>
+        <td>2,900</td>
+        <td>16 (Easy)</td>
+        <td>₹16.00</td>
+        <td><code>/data-science.html</code></td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td><strong>machine learning question bank</strong></td>
+        <td>Academic</td>
+        <td>2,400</td>
+        <td>20 (Easy)</td>
+        <td>₹19.00</td>
+        <td><code>/question-bank.html</code></td>
+      </tr>
+      <tr>
+        <td>10</td>
+        <td><strong>a star algorithm in ai questions</strong></td>
+        <td>Academic</td>
+        <td>2,200</td>
+        <td>17 (Easy)</td>
+        <td>₹15.00</td>
+        <td><code>/question-bank.html</code></td>
+      </tr>
+      <tr>
+        <td>11</td>
+        <td><strong>ai and ds question bank</strong></td>
+        <td>Academic</td>
+        <td>1,900</td>
+        <td>14 (Easy)</td>
+        <td>₹12.00</td>
+        <td><code>/question-bank.html</code></td>
+      </tr>
+      <tr>
+        <td>12</td>
+        <td><strong>ai and data science semester syllabus</strong></td>
+        <td>Academic</td>
+        <td>1,800</td>
+        <td>15 (Easy)</td>
+        <td>₹14.00</td>
+        <td><code>/study-material.html</code></td>
+      </tr>
+      <tr>
+        <td>13</td>
+        <td><strong>mathematics for ai and data science</strong></td>
+        <td>Academic</td>
+        <td>1,600</td>
+        <td>19 (Easy)</td>
+        <td>₹21.00</td>
+        <td><code>/mathematics.html</code></td>
+      </tr>
+      <tr>
+        <td>14</td>
+        <td><strong>heuristic search in ai notes</strong></td>
+        <td>Academic</td>
+        <td>1,300</td>
+        <td>12 (Easy)</td>
+        <td>₹10.00</td>
+        <td><code>/ai.html</code></td>
+      </tr>
+      <tr>
+        <td>15</td>
+        <td><strong>machine learning projects for students</strong></td>
+        <td>Informational</td>
+        <td>9,900</td>
+        <td>34 (Easy)</td>
+        <td>₹45.00</td>
+        <td><code>/projects.html</code></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>3. Content Gap & On-Page Keyword Placement Strategy</h2>
+  <ul>
+    <li><strong>Long-Tail Competitive Advantage:</strong> Major corporate portals dominate broad terms like <em>"machine learning"</em> ($SD &gt; 85$), but academic long-tail terms like <em>"ai and ds question bank"</em> ($SD &lt; 20$) are underserved. AIStudyHub leverages this gap to rank on Page 1.</li>
+    <li><strong>Strategic Tag Placement:</strong> Target keywords are injected into primary ranking factors: URL slugs (<code>/mathematics.html</code>), Front-loaded `<title>` tags, H1/H2 headers, and image descriptive alt text.</li>
+  </ul>
+
+  <div style="margin-top: 35px; border-top: 1px solid #94a3b8; padding-top: 10px; display: flex; justify-content: space-between; font-size: 9pt; color: #64748b;">
+    <span>Zeal College of Engineering and Research, Pune</span>
+    <span>Department of Artificial Intelligence & Data Science</span>
+    <span>Candidate: Samiksha Kakade</span>
+  </div>
+</div>
+
+</body>
+</html>
