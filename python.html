@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Python for AI & Data Science | AIStudyHub</title>
+<meta name="description" content="Python programming notes, NumPy arrays, Pandas DataFrames, and scientific computing tutorials for AI & Data Science students.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://arshadengine.github.io/-AIStudyHub/python.html">
+<meta property="og:title" content="Python for AI & Data Science | AIStudyHub">
+<meta property="og:description" content="Master Python fundamentals, NumPy vectorization, Pandas data manipulation, and Scikit-Learn workflows.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://arshadengine.github.io/-AIStudyHub/python.html">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="index.html"><span class="brand-mark">AI</span><span>AIStudy<span>Hub</span></span></a>
+    <button class="menu-toggle" aria-label="Open menu">☰</button>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="study-material.html">Study Material</a>
+      <a href="question-bank.html">Question Bank</a>
+      <a href="projects.html">Projects</a>
+      <a href="blog.html">Blog</a>
+      <a href="about.html">About</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <span class="eyebrow">PROGRAMMING FOUNDATION</span>
+    <h1>Python for AI & Data Science</h1>
+    <p>Build an unshakeable foundation in Python syntax, object-oriented concepts, vectorized NumPy operations, and Pandas data wrangling.</p>
+    <div class="sub-nav">
+      <a href="#syntax">Python Fundamentals</a>
+      <a href="#numpy">NumPy Vector Math</a>
+      <a href="#pandas">Pandas DataFrames</a>
+      <a href="#code">Cheat-Sheet Snippets</a>
+      <a href="study-material.html#python-section">Study Material →</a>
+    </div>
+  </section>
+
+  <section class="container section">
+    <div class="cards three" style="margin-bottom:30px;">
+      <div id="syntax" class="card">
+        <span class="badge badge-purple">Core Python</span>
+        <h3>Data Structures & Syntax</h3>
+        <p>Lists, tuples, sets, dictionaries, list comprehensions, lambda expressions, functions with *args/**kwargs, and file I/O handling.</p>
+      </div>
+
+      <div id="numpy" class="card">
+        <span class="badge badge-blue">Numerical Python</span>
+        <h3>NumPy N-D Arrays</h3>
+        <p>Vectorization, multidimensional array slicing, array shapes, broadcasting rules, dot products, and linear algebra routines (<code>np.linalg</code>).</p>
+      </div>
+
+      <div id="pandas" class="card">
+        <span class="badge badge-green">Data Wrangling</span>
+        <h3>Pandas DataFrames</h3>
+        <p>Reading tabular CSV/Excel data, column filtering, index manipulation, <code>groupby()</code> aggregations, pivot tables, and merging datasets.</p>
+      </div>
+    </div>
+
+    <!-- Code Examples -->
+    <div id="code" class="syllabus-module">
+      <div class="syllabus-header">
+        <div>
+          <span class="badge badge-amber">Lab Cheat Sheet</span>
+          <h3>Essential Python for AI & DS Labs</h3>
+        </div>
+      </div>
+      <pre><code>import numpy as np
+import pandas as pd
+
+# 1. NumPy Vectorized Broadcasting
+x = np.array([1, 2, 3, 4, 5])
+y = x * 2 + 10  # Element-wise operations without explicit loops
+print("Vectorized result:", y)
+
+# 2. Pandas Aggregation and Imputation
+data = {
+    'Student_ID': [101, 102, 103, 104],
+    'Score': [85, np.nan, 92, 78],
+    'Department': ['AI&DS', 'AI&DS', 'CS', 'AI&DS']
+}
+df = pd.DataFrame(data)
+
+# Impute missing values with mean
+df['Score'] = df['Score'].fillna(df['Score'].mean())
+
+# GroupBy calculation
+avg_scores = df.groupby('Department')['Score'].mean()
+print("\nDepartment Averages:\n", avg_scores)</code></pre>
+    </div>
+
+    <div class="callout">
+      <strong>Next Step:</strong> Connect your Python skills to machine learning by reading the <a href="blog/ml-roadmap.html" class="text-link">How to Start Learning Machine Learning Roadmap</a>.
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container footer-grid">
+    <div>
+      <a class="brand" href="index.html"><span class="brand-mark">AI</span><span>AIStudy<span>Hub</span></span></a>
+      <p>Learn AI. Master Data. Build the Future.</p>
+    </div>
+    <div>
+      <h4>Learn</h4>
+      <a href="ai.html">Artificial Intelligence</a>
+      <a href="machine-learning.html">Machine Learning</a>
+      <a href="data-science.html">Data Science</a>
+      <a href="python.html">Python</a>
+      <a href="mathematics.html">Mathematics for AI</a>
+    </div>
+    <div>
+      <h4>Resources</h4>
+      <a href="study-material.html">Study Material</a>
+      <a href="question-bank.html">Question Bank</a>
+      <a href="projects.html">Projects</a>
+      <a href="resources.html">Resources</a>
+    </div>
+    <div>
+      <h4>Website</h4>
+      <a href="about.html">About</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© 2026 AIStudyHub</span>
+    <span>Educational project by Samiksha Kakade</span>
+  </div>
+</footer>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mathematics for AI & Data Science | AIStudyHub</title>
+<meta name="description" content="Comprehensive notes on Linear Algebra, Calculus, Probability, and Statistics for Artificial Intelligence and Data Science engineering students.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://arshadengine.github.io/-AIStudyHub/mathematics.html">
+<meta property="og:title" content="Mathematics for AI & Data Science | AIStudyHub">
+<meta property="og:description" content="Master Linear Algebra, Calculus, and Statistics for AI and Data Science. Free lecture notes, formulas, and cheat sheets.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://arshadengine.github.io/-AIStudyHub/mathematics.html">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="index.html"><span class="brand-mark">AI</span><span>AIStudy<span>Hub</span></span></a>
+    <button class="menu-toggle" aria-label="Open menu">☰</button>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="study-material.html">Study Material</a>
+      <a href="question-bank.html">Question Bank</a>
+      <a href="projects.html">Projects</a>
+      <a href="blog.html">Blog</a>
+      <a href="about.html">About</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <span class="eyebrow">MATHEMATICS FOR AI & DS</span>
+    <h1>Mathematics for AI & Data Science</h1>
+    <p>Mathematics is the engine behind modern machine learning. Understand the linear algebra, multivariate calculus, and probability concepts that drive intelligent algorithms.</p>
+    <div class="sub-nav">
+      <a href="#linear-algebra">Linear Algebra</a>
+      <a href="#calculus">Calculus & Optimization</a>
+      <a href="#probability">Probability & Statistics</a>
+      <a href="#formulas">Key Formulas & Code</a>
+      <a href="#references">Textbooks & Resources</a>
+    </div>
+  </section>
+
+  <section class="container section">
+    <div class="cards four" style="margin-bottom: 40px;">
+      <div class="card">
+        <span class="badge badge-purple">Module 1</span>
+        <h3>Linear Algebra</h3>
+        <p>Vectors, Matrices, Eigenvalues, SVD, and high-dimensional transformations.</p>
+      </div>
+      <div class="card">
+        <span class="badge badge-blue">Module 2</span>
+        <h3>Calculus & Optim.</h3>
+        <p>Partial derivatives, gradients, Jacobian, and Gradient Descent algorithms.</p>
+      </div>
+      <div class="card">
+        <span class="badge badge-green">Module 3</span>
+        <h3>Probability & Stats</h3>
+        <p>Bayes' rule, probability distributions, MLE, hypothesis testing, and confidence intervals.</p>
+      </div>
+      <div class="card">
+        <span class="badge badge-amber">Module 4</span>
+        <h3>Discrete Math</h3>
+        <p>Graph theory for neural networks, combinatorics, and boolean logic.</p>
+      </div>
+    </div>
+
+    <!-- Linear Algebra -->
+    <div id="linear-algebra" class="syllabus-module">
+      <div class="syllabus-header">
+        <div>
+          <span class="badge badge-purple">Unit 1</span>
+          <h3>Linear Algebra for Machine Learning</h3>
+        </div>
+        <span style="font-size:13px; color:var(--muted);">Essential for Dimensionality Reduction & Deep Learning</span>
+      </div>
+      <p style="color:var(--muted); margin-bottom:16px;">Linear algebra provides the mathematical vocabulary to represent data, weights, and high-dimensional spaces in artificial intelligence.</p>
+      <ul class="topic-list">
+        <li>Vectors, Vector Spaces & Norms (L1, L2, Frobenius)</li>
+        <li>Matrix Operations, Determinants & Inverse Matrices</li>
+        <li>Dot Products, Projections & Orthogonality</li>
+        <li>Eigenvalues and Eigenvectors (Av = λv)</li>
+        <li>Singular Value Decomposition (SVD)</li>
+        <li>Principal Component Analysis (PCA) Derivation</li>
+      </ul>
+      <div class="key-points" style="margin-top:20px;">
+        <strong>Why it matters in AI:</strong> Every dataset is a matrix \(X \in \mathbb{R}^{n \times d}\), where rows are observations and columns are features. Weights in deep neural networks are weight tensors updated via matrix multiplication.
+      </div>
+    </div>
+
+    <!-- Calculus -->
+    <div id="calculus" class="syllabus-module">
+      <div class="syllabus-header">
+        <div>
+          <span class="badge badge-blue">Unit 2</span>
+          <h3>Multivariate Calculus & Optimization</h3>
+        </div>
+        <span style="font-size:13px; color:var(--muted);">Engine of Model Training & Backpropagation</span>
+      </div>
+      <p style="color:var(--muted); margin-bottom:16px;">Machine learning is fundamentally an optimization problem: finding model parameters that minimize an objective loss function.</p>
+      <ul class="topic-list">
+        <li>Limits, Continuity & Differentiation Rules</li>
+        <li>Partial Derivatives & Gradients (\(\nabla f\))</li>
+        <li>Multivariate Chain Rule (Foundation of Backprop)</li>
+        <li>Jacobian Matrix and Hessian Matrix (Curvature)</li>
+        <li>Convex Optimization & Saddle Points</li>
+        <li>Stochastic Gradient Descent (SGD), Momentum & Adam Optimizer</li>
+      </ul>
+    </div>
+
+    <!-- Probability & Statistics -->
+    <div id="probability" class="syllabus-module">
+      <div class="syllabus-header">
+        <div>
+          <span class="badge badge-green">Unit 3</span>
+          <h3>Probability & Inferential Statistics</h3>
+        </div>
+        <span style="font-size:13px; color:var(--muted);">Handling Uncertainty & Data Distributions</span>
+      </div>
+      <p style="color:var(--muted); margin-bottom:16px;">Data Science and Machine Learning models make probabilistic inferences under noise and uncertainty.</p>
+      <ul class="topic-list">
+        <li>Axioms of Probability & Conditional Probability</li>
+        <li>Bayes' Theorem: \(P(A|B) = \frac{P(B|A)P(A)}{P(B)}\)</li>
+        <li>Random Variables, Expectation, Variance & Covariance</li>
+        <li>Distributions: Gaussian (Normal), Bernoulli, Binomial, Poisson</li>
+        <li>Maximum Likelihood Estimation (MLE) & MAP</li>
+        <li>Central Limit Theorem, Hypothesis Testing & p-values</li>
+      </ul>
+    </div>
+
+    <!-- Code & Formulas -->
+    <div id="formulas" class="syllabus-module">
+      <div class="syllabus-header">
+        <div>
+          <span class="badge badge-amber">Interactive Code</span>
+          <h3>Mathematical Concepts in Python (NumPy)</h3>
+        </div>
+      </div>
+      <p style="color:var(--muted); margin-bottom:14px;">Here is how linear algebra and gradient calculations translate directly into Python code:</p>
+      <pre><code>import numpy as np
+
+# 1. Matrix Multiplication & Vector Dot Product
+A = np.array([[2, 1], [1, 3]])
+v = np.array([1, 2])
+result = np.dot(A, v)
+print("A * v =", result)
+
+# 2. Eigenvalues and Eigenvectors (used in PCA)
+eigenvalues, eigenvectors = np.linalg.eig(A)
+print("Eigenvalues:", eigenvalues)
+print("Eigenvectors:\n", eigenvectors)
+
+# 3. Simple Gradient Step for Mean Squared Error Loss
+# Loss = (y_pred - y_true)^2
+y_true = 5.0
+weight = 2.0
+x = 2.0  # input feature
+learning_rate = 0.05
+
+for step in range(5):
+    y_pred = weight * x
+    loss = (y_pred - y_true)**2
+    # Gradient: dLoss/dWeight = 2 * (y_pred - y_true) * x
+    grad = 2 * (y_pred - y_true) * x
+    weight -= learning_rate * grad
+    print(f"Step {step+1}: Weight = {weight:.4f}, Loss = {loss:.4f}")</code></pre>
+    </div>
+
+    <!-- Reference Books -->
+    <div id="references" class="info-panel" style="margin-top:30px;">
+      <h3>Recommended Academic Textbooks</h3>
+      <p style="color:var(--muted);">Standard textbooks prescribed by leading engineering universities for AI & DS curricula:</p>
+      <div class="cards two" style="margin-top:15px;">
+        <div class="card">
+          <h4>Mathematics for Machine Learning</h4>
+          <p>By Marc Peter Deisenroth, A. Aldo Faisal, and Cheng Soon Ong (Cambridge University Press). The definitive reference connecting linear algebra and calculus to ML algorithms.</p>
+        </div>
+        <div class="card">
+          <h4>Introduction to Linear Algebra</h4>
+          <p>By Gilbert Strang (Wellesley-Cambridge Press). Renowned MIT textbook for conceptual clarity and geometric intuition.</p>
+        </div>
+      </div>
+      <div style="margin-top:20px; display:flex; gap:12px; flex-wrap:wrap;">
+        <a class="btn primary" href="study-material.html">Explore Study Material</a>
+        <a class="btn ghost" href="question-bank.html">Practice Math Questions</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container footer-grid">
+    <div>
+      <a class="brand" href="index.html"><span class="brand-mark">AI</span><span>AIStudy<span>Hub</span></span></a>
+      <p>Learn AI. Master Data. Build the Future.</p>
+    </div>
+    <div>
+      <h4>Learn</h4>
+      <a href="ai.html">Artificial Intelligence</a>
+      <a href="machine-learning.html">Machine Learning</a>
+      <a href="data-science.html">Data Science</a>
+      <a href="python.html">Python</a>
+      <a href="mathematics.html">Mathematics for AI</a>
+    </div>
+    <div>
+      <h4>Resources</h4>
+      <a href="study-material.html">Study Material</a>
+      <a href="question-bank.html">Question Bank</a>
+      <a href="projects.html">Projects</a>
+      <a href="resources.html">Resources</a>
+    </div>
+    <div>
+      <h4>Website</h4>
+      <a href="about.html">About</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© 2026 AIStudyHub</span>
+    <span>Educational project by Samiksha Kakade</span>
+  </div>
+</footer>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

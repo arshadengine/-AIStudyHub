@@ -1,0 +1,524 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI & DS Question Bank & Previous Year Questions | AIStudyHub</title>
+<meta name="description" content="Comprehensive AI & Data Science question bank with Unit 1, Unit 2, Unit 3, Unit 4, and Previous Year Questions (PYQs) with model answers.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://arshadengine.github.io/-AIStudyHub/question-bank.html">
+<meta property="og:title" content="AI & DS Question Bank & Previous Year Questions | AIStudyHub">
+<meta property="og:description" content="Practice unit-wise exam questions and university previous year question papers for Artificial Intelligence and Data Science engineering students.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://arshadengine.github.io/-AIStudyHub/question-bank.html">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="index.html"><span class="brand-mark">AI</span><span>AIStudy<span>Hub</span></span></a>
+    <button class="menu-toggle" aria-label="Open menu">☰</button>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="study-material.html">Study Material</a>
+      <a href="question-bank.html">Question Bank</a>
+      <a href="projects.html">Projects</a>
+      <a href="blog.html">Blog</a>
+      <a href="about.html">About</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <span class="eyebrow">EXAM PREPARATION & REVISION</span>
+    <h1>AI & DS Question Bank</h1>
+    <p>Curated unit-wise question bank, marking schemes, model solutions, and university Previous Year Questions (PYQs) for AI & Data Science students.</p>
+    <div class="sub-nav">
+      <a href="#unit1">Unit 1: Search & Foundations</a>
+      <a href="#unit2">Unit 2: Logic & Reasoning</a>
+      <a href="#unit3">Unit 3: Machine Learning</a>
+      <a href="#unit4">Unit 4: Deep Learning & Ethics</a>
+      <a href="#pyq">Previous Year Questions</a>
+    </div>
+  </section>
+
+  <section class="container section">
+    <!-- Quick Exam Stats -->
+    <div class="cards four" style="margin-bottom: 35px;">
+      <div class="card" style="text-align:center;">
+        <span class="badge badge-purple">4 Units</span>
+        <h3 style="margin:10px 0 4px; font-size:28px;">60+</h3>
+        <p>Curated Exam Questions</p>
+      </div>
+      <div class="card" style="text-align:center;">
+        <span class="badge badge-blue">Marks Coverage</span>
+        <h3 style="margin:10px 0 4px; font-size:28px;">2M / 5M / 10M</h3>
+        <p>Short, Medium & Long</p>
+      </div>
+      <div class="card" style="text-align:center;">
+        <span class="badge badge-green">Past Papers</span>
+        <h3 style="margin:10px 0 4px; font-size:28px;">2022–2024</h3>
+        <p>End-Sem University PYQs</p>
+      </div>
+      <div class="card" style="text-align:center;">
+        <span class="badge badge-amber">Solutions</span>
+        <h3 style="margin:10px 0 4px; font-size:28px;">100%</h3>
+        <p>Model Answers & Hints</p>
+      </div>
+    </div>
+
+    <!-- UNIT 1 -->
+    <div id="unit1" style="margin-bottom: 40px;">
+      <div class="syllabus-header">
+        <div>
+          <span class="badge badge-purple">UNIT 1</span>
+          <h2>Foundations of AI & Problem Formulation</h2>
+        </div>
+        <span style="font-size:13px; color:var(--muted);">Heuristic Search • A* • State Space • Minimax</span>
+      </div>
+
+      <!-- Q1 (2M) -->
+      <details class="qb-item">
+        <summary class="qb-summary">
+          <div class="qb-title-wrap">
+            <span class="badge badge-purple">2 Marks</span>
+            <span>Q1. Define State Space Search and list the five key components of a well-formulated search problem.</span>
+          </div>
+          <span class="qb-toggle-icon">▶</span>
+        </summary>
+        <div class="qb-body">
+          <div class="qb-meta-row">
+            <span class="badge badge-green">Short Answer</span>
+            <span style="font-size:12px; color:var(--muted);">Frequently Asked in Mid-Sem & End-Sem</span>
+          </div>
+          <p><strong>Model Answer:</strong> State space search is the process of navigating from an initial configuration through successive valid actions until reaching a recognized goal state.</p>
+          <p>The 5 formal components are:</p>
+          <ol>
+            <li><strong>Initial State:</strong> The starting condition in which the agent begins.</li>
+            <li><strong>Actions / Successor Function:</strong> A set of legal actions available at state \(s\).</li>
+            <li><strong>Transition Model:</strong> A specification of the state \(s' = \text{Result}(s, a)\) resulting from action \(a\).</li>
+            <li><strong>Goal Test:</strong> A boolean test determining if the current state satisfies the objective.</li>
+            <li><strong>Path Cost:</strong> A function assigning a numeric cost to a sequence of actions.</li>
+          </ol>
+        </div>
+      </details>
+
+      <!-- Q2 (5M) -->
+      <details class="qb-item">
+        <summary class="qb-summary">
+          <div class="qb-title-wrap">
+            <span class="badge badge-blue">5 Marks</span>
+            <span>Q2. Explain the A* Search algorithm. What does it mean for a heuristic function to be admissible and consistent?</span>
+          </div>
+          <span class="qb-toggle-icon">▶</span>
+        </summary>
+        <div class="qb-body">
+          <div class="qb-meta-row">
+            <span class="badge badge-blue">Analytical</span>
+            <span style="font-size:12px; color:var(--muted);">Dec 2023 University Exam (5 Marks)</span>
+          </div>
+          <p><strong>Evaluation Function:</strong> A* evaluates nodes using \(f(n) = g(n) + h(n)\), where:</p>
+          <ul>
+            <li>\(g(n)\) = Exact cost to reach node \(n\) from the start node.</li>
+            <li>\(h(n)\) = Estimated cost from node \(n\) to the closest goal state.</li>
+          </ul>
+          <p><strong>Admissibility:</strong> A heuristic \(h(n)\) is admissible if it never overestimates the true cost to reach the goal: \(h(n) \le h^*(n)\). Admissibility guarantees optimality for Tree Search.</p>
+          <p><strong>Consistency (Monotonicity):</strong> A heuristic is consistent if for every node \(n\) and successor \(n'\) generated by action \(a\): \(h(n) \le c(n, a, n') + h(n')\). Consistency guarantees optimality for Graph Search without needing to reopen closed nodes.</p>
+        </div>
+      </details>
+
+      <!-- Q3 (10M) -->
+      <details class="qb-item">
+        <summary class="qb-summary">
+          <div class="qb-title-wrap">
+            <span class="badge badge-amber">10 Marks</span>
+            <span>Q3. Formulate the 8-Puzzle Problem. Compare BFS, DFS, and A* search in terms of completeness, optimality, time complexity, and space complexity.</span>
+          </div>
+          <span class="qb-toggle-icon">▶</span>
+        </summary>
+        <div class="qb-body">
+          <div class="qb-meta-row">
+            <span class="badge badge-amber">Comprehensive / Long Answer</span>
+            <span style="font-size:12px; color:var(--muted);">Recurring 10-Mark Question (May 2024, Dec 2022)</span>
+          </div>
+          <p><strong>8-Puzzle Problem Formulation:</strong></p>
+          <ul>
+            <li><strong>States:</strong> Integer locations of tiles \(1..8\) and the blank space in a \(3 \times 3\) grid (\(9!/2 = 181,440\) reachable states).</li>
+            <li><strong>Initial State:</strong> Any solvable configuration of the grid.</li>
+            <li><strong>Actions:</strong> Move blank space {Left, Right, Up, Down}.</li>
+            <li><strong>Goal Test:</strong> Tiles arranged sequentially in goal configuration.</li>
+            <li><strong>Path Cost:</strong> 1 per step (uniform cost).</li>
+          </ul>
+          <p><strong>Algorithm Comparison Table:</strong></p>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Algorithm</th>
+                  <th>Complete?</th>
+                  <th>Optimal?</th>
+                  <th>Time Complexity</th>
+                  <th>Space Complexity</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>BFS</strong></td>
+                  <td>Yes (if branching factor \(b\) is finite)</td>
+                  <td>Yes (for step cost 1)</td>
+                  <td>\(O(b^d)\)</td>
+                  <td>\(O(b^d)\) (high memory bottleneck)</td>
+                </tr>
+                <tr>
+                  <td><strong>DFS</strong></td>
+                  <td>No (fails in infinite spaces)</td>
+                  <td>No</td>
+                  <td>\(O(b^m)\)</td>
+                  <td>\(O(b \cdot m)\) (linear memory)</td>
+                </tr>
+                <tr>
+                  <td><strong>A* Search</strong></td>
+                  <td>Yes</td>
+                  <td>Yes (with admissible \(h\))</td>
+                  <td>\(O(b^{\epsilon d})\)</td>
+                  <td>\(O(b^d)\) (stores all frontier nodes)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p><strong>Effective Heuristics for 8-Puzzle:</strong> \(h_1\) = Number of misplaced tiles, and \(h_2\) = Total Manhattan distance of all tiles from target positions (\(h_2\) dominates \(h_1\)).</p>
+        </div>
+      </details>
+    </div>
+
+    <!-- UNIT 2 -->
+    <div id="unit2" style="margin-bottom: 40px;">
+      <div class="syllabus-header">
+        <div>
+          <span class="badge badge-blue">UNIT 2</span>
+          <h2>Knowledge Representation, Logic & Reasoning</h2>
+        </div>
+        <span style="font-size:13px; color:var(--muted);">First-Order Logic • Resolution • Forward & Backward Chaining</span>
+      </div>
+
+      <!-- Q4 (2M) -->
+      <details class="qb-item">
+        <summary class="qb-summary">
+          <div class="qb-title-wrap">
+            <span class="badge badge-purple">2 Marks</span>
+            <span>Q4. State the difference between Propositional Logic and First-Order Predicate Logic (FOL).</span>
+          </div>
+          <span class="qb-toggle-icon">▶</span>
+        </summary>
+        <div class="qb-body">
+          <p><strong>Model Answer:</strong> Propositional logic represents facts as atomic boolean statements (e.g., \(P \land Q\)) with limited expressive power. First-Order Logic (FOL) adds objects, relations, functions, and quantifiers (\(\forall\) Universal, \(\exists\) Existential), allowing expressions like \(\forall x \, (\text{Student}(x) \implies \text{Studies}(x))\).</p>
+        </div>
+      </details>
+
+      <!-- Q5 (5M) -->
+      <details class="qb-item">
+        <summary class="qb-summary">
+          <div class="qb-title-wrap">
+            <span class="badge badge-blue">5 Marks</span>
+            <span>Q5. Compare Forward Chaining with Backward Chaining in rule-based expert systems with examples.</span>
+          </div>
+          <span class="qb-toggle-icon">▶</span>
+        </summary>
+        <div class="qb-body">
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Feature</th>
+                  <th>Forward Chaining (Data-Driven)</th>
+                  <th>Backward Chaining (Goal-Driven)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Direction</strong></td>
+                  <td>Starts with known premises/facts and infers new conclusions.</td>
+                  <td>Starts with a goal hypothesis and works backward to find supporting facts.</td>
+                </tr>
+                <tr>
+                  <td><strong>Search Strategy</strong></td>
+                  <td>Bottom-up reasoning.</td>
+                  <td>Top-down reasoning.</td>
+                </tr>
+                <tr>
+                  <td><strong>Application</strong></td>
+                  <td>Monitoring, automated control, data synthesis.</td>
+                  <td>Medical diagnosis, debugging, theorem proving (e.g., Prolog).</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </details>
+
+      <!-- Q6 (10M) -->
+      <details class="qb-item">
+        <summary class="qb-summary">
+          <div class="qb-title-wrap">
+            <span class="badge badge-amber">10 Marks</span>
+            <span>Q6. Explain Resolution Refutation in First-Order Logic. Demonstrate with a complete proof tree to verify a given query.</span>
+          </div>
+          <span class="qb-toggle-icon">▶</span>
+        </summary>
+        <div class="qb-body">
+          <p><strong>Resolution Steps:</strong></p>
+          <ol>
+            <li>Negate the goal statement that needs to be proven (\(\neg \text{Goal}\)).</li>
+            <li>Convert all knowledge base statements and the negated goal into Conjunctive Normal Form (CNF) Clauses:
+              <ul>
+                <li>Eliminate implications (\(A \implies B \equiv \neg A \lor B\))</li>
+                <li>Move \(\neg\) inwards using De Morgan's Laws</li>
+                <li>Standardize variables</li>
+                <li>Skolemize existential quantifiers (\(\exists\))</li>
+                <li>Drop universal quantifiers (\(\forall\))</li>
+              </ul>
+            </li>
+            <li>Repeatedly resolve pairs of clauses containing complementary literals using Unification until obtaining the empty clause (\(\square\) contradiction).</li>
+          </ol>
+          <p><strong>Conclusion:</strong> Deriving \(\square\) proves the negated hypothesis was impossible, confirming the original query must be true.</p>
+        </div>
+      </details>
+    </div>
+
+    <!-- UNIT 3 -->
+    <div id="unit3" style="margin-bottom: 40px;">
+      <div class="syllabus-header">
+        <div>
+          <span class="badge badge-green">UNIT 3</span>
+          <h2>Machine Learning Foundations & Supervised Learning</h2>
+        </div>
+        <span style="font-size:13px; color:var(--muted);">Regression • Classification • Trees • SVM • Evaluation</span>
+      </div>
+
+      <!-- Q7 (2M) -->
+      <details class="qb-item">
+        <summary class="qb-summary">
+          <div class="qb-title-wrap">
+            <span class="badge badge-purple">2 Marks</span>
+            <span>Q7. Explain Precision, Recall, and F1-Score. When is Recall preferred over Precision?</span>
+          </div>
+          <span class="qb-toggle-icon">▶</span>
+        </summary>
+        <div class="qb-body">
+          <p><strong>Definitions:</strong></p>
+          <ul>
+            <li>\(\text{Precision} = \frac{TP}{TP + FP}\): Proportion of positive identifications that were actually correct.</li>
+            <li>\(\text{Recall} = \frac{TP}{TP + FN}\): Proportion of actual positives identified correctly.</li>
+            <li>\(\text{F1-Score} = 2 \times \frac{\text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}}\): Harmonic mean of precision and recall.</li>
+          </ul>
+          <p><strong>When Recall is preferred:</strong> In safety-critical scenarios like cancer diagnosis or fraudulent transaction detection, where missing a positive case (False Negative) has catastrophic consequences.</p>
+        </div>
+      </details>
+
+      <!-- Q8 (5M) -->
+      <details class="qb-item">
+        <summary class="qb-summary">
+          <div class="qb-title-wrap">
+            <span class="badge badge-blue">5 Marks</span>
+            <span>Q8. Explain Decision Tree splitting criteria: Information Gain (Entropy) versus Gini Impurity.</span>
+          </div>
+          <span class="qb-toggle-icon">▶</span>
+        </summary>
+        <div class="qb-body">
+          <p><strong>Entropy (ID3):</strong> Measures the uncertainty or disorder in a dataset \(S\):</p>
+          <p>\[H(S) = -\sum_{i=1}^c p_i \log_2(p_i)\]</p>
+          <p><strong>Information Gain:</strong> Reduction in entropy achieved by splitting on feature \(A\):</p>
+          <p>\[IG(S, A) = H(S) - \sum_{v \in \text{Values}(A)} \frac{|S_v|}{|S|} H(S_v)\]</p>
+          <p><strong>Gini Impurity (CART):</strong> Measures probability of incorrectly labeling a randomly chosen element:</p>
+          <p>\[\text{Gini}(S) = 1 - \sum_{i=1}^c p_i^2\]</p>
+          <p><em>Gini Impurity is computationally faster as it avoids logarithmic computations.</em></p>
+        </div>
+      </details>
+
+      <!-- Q9 (10M) -->
+      <details class="qb-item">
+        <summary class="qb-summary">
+          <div class="qb-title-wrap">
+            <span class="badge badge-amber">10 Marks</span>
+            <span>Q9. Solve a numerical example of Naive Bayes Classification. Explain the naive independence assumption and Laplace Smoothing.</span>
+          </div>
+          <span class="qb-toggle-icon">▶</span>
+        </summary>
+        <div class="qb-body">
+          <p><strong>Bayes' Rule for Classification:</strong></p>
+          <p>\[P(y | x_1, \dots, x_n) = \frac{P(y) \prod_{i=1}^n P(x_i | y)}{P(x_1, \dots, x_n)}\]</p>
+          <p><strong>The "Naive" Assumption:</strong> Conditional independence of all input features \(x_i\) given class label \(y\): \(P(x_1, x_2 | y) = P(x_1|y) \cdot P(x_2|y)\).</p>
+          <p><strong>Laplace Smoothing (Additive Smoothing):</strong> Avoids zero-probability multiplication when an attribute value does not occur with a class in the training split:</p>
+          <p>\[P(x_i | y) = \frac{\text{Count}(x_i, y) + 1}{\text{Count}(y) + |V|}\]</p>
+          <p>where \(|V|\) is the total number of distinct feature values.</p>
+        </div>
+      </details>
+    </div>
+
+    <!-- UNIT 4 -->
+    <div id="unit4" style="margin-bottom: 40px;">
+      <div class="syllabus-header">
+        <div>
+          <span class="badge badge-amber">UNIT 4</span>
+          <h2>Deep Learning, Neural Networks & AI Ethics</h2>
+        </div>
+        <span style="font-size:13px; color:var(--muted);">Perceptrons • Backpropagation • CNN • Bias & Privacy</span>
+      </div>
+
+      <!-- Q10 (2M) -->
+      <details class="qb-item">
+        <summary class="qb-summary">
+          <div class="qb-title-wrap">
+            <span class="badge badge-purple">2 Marks</span>
+            <span>Q10. Why is a single-layer perceptron unable to solve the XOR classification problem?</span>
+          </div>
+          <span class="qb-toggle-icon">▶</span>
+        </summary>
+        <div class="qb-body">
+          <p><strong>Model Answer:</strong> A single-layer perceptron defines a single linear hyperplane (decision boundary) \(w_1 x_1 + w_2 x_2 + b = 0\). The XOR function outputs 1 when inputs differ ((0,1) and (1,0)) and 0 when they match ((0,0) and (1,1)), which is non-linearly separable. A multi-layer architecture with non-linear activation functions is required.</p>
+        </div>
+      </details>
+
+      <!-- Q11 (5M) -->
+      <details class="qb-item">
+        <summary class="qb-summary">
+          <div class="qb-title-wrap">
+            <span class="badge badge-blue">5 Marks</span>
+            <span>Q11. Explain the Backpropagation algorithm with the chain rule of calculus. How are weights updated?</span>
+          </div>
+          <span class="qb-toggle-icon">▶</span>
+        </summary>
+        <div class="qb-body">
+          <p><strong>Algorithm Mechanics:</strong></p>
+          <ol>
+            <li><strong>Forward Pass:</strong> Propagate input vectors through hidden layers to compute output activations \(\hat{y}\) and total loss \(E = \frac{1}{2}(y - \hat{y})^2\).</li>
+            <li><strong>Backward Pass:</strong> Apply the multivariable chain rule to compute partial derivatives of loss with respect to each weight:</p>
+              <p>\[\frac{\partial E}{\partial w_{ij}} = \frac{\partial E}{\partial y_j} \cdot \frac{\partial y_j}{\partial z_j} \cdot \frac{\partial z_j}{\partial w_{ij}}\]
+            </li>
+            <li><strong>Weight Update:</strong> Adjust parameters in the opposite direction of the gradient:</p>
+              <p>\[w_{ij}^{(\text{new})} = w_{ij}^{(\text{old})} - \eta \cdot \frac{\partial E}{\partial w_{ij}}\]
+            </li>
+          </ol>
+        </div>
+      </details>
+
+      <!-- Q12 (10M) -->
+      <details class="qb-item">
+        <summary class="qb-summary">
+          <div class="qb-title-wrap">
+            <span class="badge badge-amber">10 Marks</span>
+            <span>Q12. Discuss Ethical Considerations in AI: Algorithmic Bias, Explainability (XAI), and Data Privacy in autonomous systems.</span>
+          </div>
+          <span class="qb-toggle-icon">▶</span>
+        </summary>
+        <div class="qb-body">
+          <p><strong>Core Ethical Pillars in AI & DS:</strong></p>
+          <ul>
+            <li><strong>1. Algorithmic Bias & Fairness:</strong> Machine learning models trained on historical data mirror historical prejudice (e.g. hiring bias, facial recognition disparity). Techniques like re-weighing, adversarial debiasing, and demographic parity metrics are required.</li>
+            <li><strong>2. Explainability & Interpretability (XAI):</strong> Black-box deep models are dangerous in healthcare, judicial, and lending decisions. Methods like SHAP (SHapley Additive exPlanations) and LIME explain individual predictions.</li>
+            <li><strong>3. Data Privacy:</strong> Training on sensitive personal data risks model inversion attacks and privacy leakage. Differential privacy and federated learning enable learning without centralizing private data.</li>
+            <li><strong>4. Accountability & Safety:</strong> Establishing legal liability and safety guardrails for autonomous vehicles, medical AI, and generative models.</li>
+          </ul>
+        </div>
+      </details>
+    </div>
+
+    <!-- PREVIOUS YEAR QUESTIONS (PYQs) -->
+    <div id="pyq" class="info-panel" style="margin-top: 40px;">
+      <div class="syllabus-header">
+        <div>
+          <span class="badge badge-green">UNIVERSITY EXAM ARCHIVE</span>
+          <h2>Previous Year Question Papers (PYQs)</h2>
+        </div>
+        <span style="font-size:13px; color:var(--muted);">Pattern Analysis & Solved Papers</span>
+      </div>
+      <p style="color:var(--muted); margin-bottom:20px;">Download official previous year examination papers and view unit-wise marks distribution trends:</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Examination Session</th>
+              <th>Subject</th>
+              <th>Max Marks</th>
+              <th>High-Weightage Topics</th>
+              <th>Paper Resource</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Winter 2024 (Dec)</strong></td>
+              <td>Artificial Intelligence & Data Science</td>
+              <td>70 Marks</td>
+              <td>A* Search, FOL Resolution, Naive Bayes numerical, CNN layers</td>
+              <td><a href="#unit1" class="text-link">View Solved Questions →</a></td>
+            </tr>
+            <tr>
+              <td><strong>Summer 2024 (May)</strong></td>
+              <td>Machine Learning & Analytics</td>
+              <td>70 Marks</td>
+              <td>Bias-Variance, SVM Margins, K-Means elbow, Backprop chain rule</td>
+              <td><a href="#unit3" class="text-link">View Solved Questions →</a></td>
+            </tr>
+            <tr>
+              <td><strong>Winter 2023 (Dec)</strong></td>
+              <td>Foundations of Artificial Intelligence</td>
+              <td>70 Marks</td>
+              <td>State space, Heuristics admissibility, Decision tree Gini index</td>
+              <td><a href="#unit1" class="text-link">View Solved Questions →</a></td>
+            </tr>
+            <tr>
+              <td><strong>Summer 2023 (May)</strong></td>
+              <td>Python for Data Science</td>
+              <td>70 Marks</td>
+              <td>NumPy vectorization, Pandas grouping, Matplotlib subplots</td>
+              <td><a href="python.html" class="text-link">View Python Guide →</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout" style="margin-top:20px;">
+        <strong>Study Strategy Tip:</strong> Focus heavily on numerical and problem-solving questions (Heuristic calculation, Decision tree calculations, Naive Bayes table, Backpropagation derivatives) as they guarantee full marks and repeat consistently across university exam cycles.
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container footer-grid">
+    <div>
+      <a class="brand" href="index.html"><span class="brand-mark">AI</span><span>AIStudy<span>Hub</span></span></a>
+      <p>Learn AI. Master Data. Build the Future.</p>
+    </div>
+    <div>
+      <h4>Learn</h4>
+      <a href="ai.html">Artificial Intelligence</a>
+      <a href="machine-learning.html">Machine Learning</a>
+      <a href="data-science.html">Data Science</a>
+      <a href="python.html">Python</a>
+      <a href="mathematics.html">Mathematics for AI</a>
+    </div>
+    <div>
+      <h4>Resources</h4>
+      <a href="study-material.html">Study Material</a>
+      <a href="question-bank.html">Question Bank</a>
+      <a href="projects.html">Projects</a>
+      <a href="resources.html">Resources</a>
+    </div>
+    <div>
+      <h4>Website</h4>
+      <a href="about.html">About</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© 2026 AIStudyHub</span>
+    <span>Educational project by Samiksha Kakade</span>
+  </div>
+</footer>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
