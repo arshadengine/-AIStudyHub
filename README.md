@@ -2,7 +2,7 @@
 
 A modern, comprehensive educational resource portal designed for Artificial Intelligence and Data Science engineering undergraduates.
 
-**Live Website:** [https://arshadengine.github.io/-AIStudyHub/](https://arshadengine.github.io/-AIStudyHub/)  
+**Live Website:** [https://aistudyhub-rust.vercel.app/](https://aistudyhub-rust.vercel.app/)  
 **GitHub Repository:** [https://github.com/arshadengine/-AIStudyHub.git](https://github.com/arshadengine/-AIStudyHub.git)
 
 ---
@@ -37,7 +37,7 @@ A modern, comprehensive educational resource portal designed for Artificial Inte
 ### 5. Technical SEO & Web Standards
 * Responsive, accessible layout with dark mode aesthetic accents.
 * Semantic HTML5 elements and Open Graph tags on all pages.
-* Canonical URLs pointing to `https://arshadengine.github.io/-AIStudyHub/`.
+* Canonical URLs pointing to `https://aistudyhub-rust.vercel.app/`.
 * Clean `sitemap.xml` and `robots.txt` for search engine indexing.
 
 ---
